@@ -6,10 +6,17 @@
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run pylon build",
   "functions": {
-    ".pylon/index.js": {
+    "api/index.ts": {
+      "runtime": "nodejs20.x",
       "memory": 1024,
       "maxDuration": 60,
       "includeFiles": ".pylon/**"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
 }
