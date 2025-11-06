@@ -12,11 +12,5 @@
       "maxDuration": 60,
       "includeFiles": ".pylon/**"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index"
-    }
-  ]
+  }
 }
