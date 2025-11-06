@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "bunVersion": "1.x",
+  "version": 2,
+  "framework": null,
+  "installCommand": "bun install --frozen-lockfile",
+  "buildCommand": "bun run pylon build",
+  "functions": {
+    ".pylon/index.js": {
+      "memory": 1024,
+      "maxDuration": 60,
+      "includeFiles": ".pylon/**"
+    }
+  }
+}
