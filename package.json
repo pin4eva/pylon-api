@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "pylon dev -c \"bun run .pylon/index.js\"",
     "build": "pylon build",
-    "start": "bun --bun .pylon/index.js"
+    "start": "bun --bun src/index.ts"
   },
   "dependencies": {
     "@getcronit/pylon": "^2.0.0",
