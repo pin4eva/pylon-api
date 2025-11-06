@@ -6,9 +6,9 @@
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run pylon build",
   "outputDirectory": ".pylon",
+  "devCommand": "bun run .pylon/index.js",
   "functions": {
     "api/index.ts": {
-      "memory": 1024,
       "maxDuration": 60,
       "includeFiles": ".pylon/**"
     }
