@@ -5,8 +5,10 @@
   "framework": null,
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run pylon build",
+  "outputDirectory": ".pylon",
   "functions": {
     "api/index.ts": {
+      "runtime": "bun@1.1",
       "memory": 1024,
       "maxDuration": 60,
       "includeFiles": ".pylon/**"
