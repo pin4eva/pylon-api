@@ -6,7 +6,8 @@
   "description": "Generated with `npm create pylon`",
   "scripts": {
     "dev": "pylon dev -c \"bun run .pylon/index.js\"",
-    "build": "pylon build"
+    "build": "pylon build",
+    "start": "bun --bun .pylon/index.js"
   },
   "dependencies": {
     "@getcronit/pylon": "^2.0.0",
