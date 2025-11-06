@@ -9,10 +9,12 @@ export const graphql = {
     divide: (a: number, b: number) => a / b
   }
 }
+app.get("/api",()=>{
+  return new Response("Welcome to the Pylon API")
+})
+app.get('/api/health', (ctx, next) => {
 
-app.get('/health', (ctx, next) => {
-
-  return new Response('Welcome home')
+  return new Response('Ok', {status: 200})
 })
 
 export default app
