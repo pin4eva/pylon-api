@@ -5,3 +5,8 @@ declare module '@getcronit/pylon' {
 
   interface Variables {}
 }
+
+declare module '../.pylon/index.js' {
+  const app: any
+  export default app
+}

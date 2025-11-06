@@ -1,20 +1,13 @@
-import {app} from '@getcronit/pylon'
+import pylonAppModule from '../.pylon/index.js'
 
-export const graphql = {
-  Query: {
-    sum: (a: number, b: number) => a + b,
-    hello: () => 'Hello, world!'
-  },
-  Mutation: {
-    divide: (a: number, b: number) => a / b
+const app = (pylonAppModule as any).default ?? (pylonAppModule as any)
+
+if (typeof app?.fetch !== 'function') {
+  throw new Error('Pylon build output does not expose a fetch handler')
+}
+
+export default {
+  async fetch(request: Request) {
+    return app.fetch(request)
   }
 }
-app.get("/api",()=>{
-  return new Response("Welcome to the Pylon API")
-})
-app.get('/api/health', (ctx, next) => {
-
-  return new Response('Ok', {status: 200})
-})
-
-export default app

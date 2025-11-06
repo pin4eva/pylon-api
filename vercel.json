@@ -9,6 +9,7 @@
   "devCommand": "bun run api/index.ts",
   "functions": {
     "api/index.ts": {
+      "runtime": "bun@1.1",
       "maxDuration": 60,
       "includeFiles": ".pylon/**"
     }
