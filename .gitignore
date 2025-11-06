@@ -173,3 +173,5 @@ dist
 
 # Pylon project
 .pylon
+
+.vercel
